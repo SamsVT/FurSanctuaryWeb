@@ -1,5 +1,5 @@
 ﻿---
-return Astro.redirect('https://discord.gg/fursanctuary');
+
 ---
 
 <html lang="en">
@@ -51,4 +51,9 @@ return Astro.redirect('https://discord.gg/fursanctuary');
 		<img src="/logo.png" alt="Fur Sanctuary Logo" class="logo" />
 		<h1>Fur Sanctuary</h1>
 	</body>
+	<script>
+		setTimeout(() => {
+			window.location.replace('https://discord.gg/fursanctuary');
+		}, 1500);
+	</script>
 </html>
