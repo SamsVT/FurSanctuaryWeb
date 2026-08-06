@@ -1,0 +1,140 @@
+---
+---
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <img src="/logo_dark.png" alt="fur Sanctuary" class="brand-logo" />
+      <span class="brand-text">fur <span class="brand-accent">Sanctuary</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#community">ชุมชน</a></li>
+      <li><a href="#activities">กิจกรรม</a></li>
+      <li><a href="#news">ข่าวสาร</a></li>
+      <li><a href="#articles">บทความ</a></li>
+      <li><a href="#about">เกี่ยวกับเรา</a></li>
+    </ul>
+    <button class="menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#community">ชุมชน</a>
+    <a href="#activities">กิจกรรม</a>
+    <a href="#news">ข่าวสาร</a>
+    <a href="#articles">บทความ</a>
+    <a href="#about">เกี่ยวกับเรา</a>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  menu.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.6rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.01em;
+  }
+  .brand-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .brand-accent { color: var(--primary); font-weight: 800; }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0 auto 0 1rem;
+    padding: 0;
+  }
+  .nav-links a {
+    color: #4b4b4b;
+    font-weight: 400;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.25s ease;
+  }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .menu-toggle {
+    display: none;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #111;
+    font-size: 1.3rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-toggle:hover { color: var(--primary); }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 1.75rem 1rem;
+  }
+  .mobile-menu a {
+    padding: 0.8rem 0;
+    color: #4b4b4b;
+    font-weight: 400;
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu.open { display: flex; }
+
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+    .nav-inner { gap: 1rem; }
+    .menu-toggle { display: flex; }
+  }</style>

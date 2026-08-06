@@ -1,0 +1,132 @@
+---
+---
+<header class="hero">
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1>
+        ดิสคอร์ด<span class="hl">ชุมชน</span><br/>
+        furry ไทย
+      </h1>
+      <p class="lead">
+        เข้าร่วมเป็นส่วนหนึ่งของ <strong>fur Sanctuary</strong>
+        พื้นที่สำหรับแลกเปลี่ยนความคิด พูดคุย
+        และสร้างมิตรภาพใหม่ ๆ
+      </p>
+
+      <div class="cta-row">
+        <a class="discord-btn" href="https://discord.gg/fursanctuary" target="_blank" rel="noopener">
+          <i class="fa-brands fa-discord"></i>
+          <span>เข้าร่วมชุมชน</span>
+          <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a class="ghost-btn" href="#about">community ของเรา</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 6rem 1.75rem 7rem;
+  }
+  .bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .blob-1 {
+    width: 400px; height: 400px;
+    background: #cfe0d4;
+    top: -100px; right: -80px;
+  }
+  .blob-2 {
+    width: 320px; height: 320px;
+    background: #e0ebe4;
+    bottom: -120px; left: -60px;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-left { max-width: 640px; }
+
+  h1 {
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    color: #0a0a0a;
+    font-weight: 800;
+  }
+  .hl {
+    color: var(--primary);
+  }
+
+  .lead {
+    font-size: 1.3rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0 0 2.25rem;
+    font-weight: 300;
+  }
+  .lead strong { color: #111; font-weight: 600; }
+
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: var(--discord);
+    color: #fff;
+    padding: 0.95rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 8px 24px rgba(88, 101, 242, 0.35);
+    transition: transform 0.2s ease, background 0.2s, box-shadow 0.2s;
+  }
+  .discord-btn:hover {
+    background: var(--discord-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(88, 101, 242, 0.45);
+  }
+  .discord-btn .arrow { transition: transform 0.2s; }
+  .discord-btn:hover .arrow { transform: translateX(4px); }
+
+  .ghost-btn {
+    padding: 0.95rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #e5e5e5;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .ghost-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+  @media (max-width: 900px) {
+    .hero { padding: 4rem 1.5rem 5rem; }
+  }
+</style>

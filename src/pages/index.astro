@@ -1,68 +1,48 @@
-﻿---
-
 ---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/logo_dark.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta http-equiv="refresh" content="5; url=https://discord.gg/fursanctuary" />
-		<meta
-			name="description"
-			content="Fur Sanctuary ชุมชน Furry ไทยสำหรับหาเพื่อน Furry, พูดคุยใน Discord Furry ไทย, Furry Roleplay และวาดรูป Furry"
-		/>
-		<meta
-			name="keywords"
-			content="Furry ไทย, ชุมชน Furry, Discord Furry ไทย, เฟอร์รี่ไทย, กลุ่ม Furry, หาเพื่อน Furry, Furry Fandom ไทย, ดิสคอร์ด เฟอร์รี่, Furry Roleplay, วาดรูป Furry"
-		/>
-		<title>Fur Sanctuary Web</title>
-		<style>
-			:root {
-				--color-primary: #2D4932;
-				--color-primary-dark: #1e3322;
-				--color-primary-light: #3d6344;
-			}
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'fur Sanctuary คืออะไร?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'fur Sanctuary คือ Discord community ของคนไทยที่ชื่นชอบ Furry ใช้สำหรับพูดคุย แลกเปลี่ยนความคิด และสร้างมิตรภาพ',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'เข้าร่วม Discord fur Sanctuary ได้อย่างไร?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'กดปุ่ม "เข้าร่วมชุมชน" บนหน้าแรก หรือเข้าไปที่ https://discord.gg/fursanctuary แล้วกดยอมรับคำเชิญ',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'fur Sanctuary มีช่องทางอื่นอีกไหม?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'มีทั้ง Roblox Group, Roblox Game, Facebook Group, Facebook Page, TikTok และ YouTube ดูได้จากฟุตเตอร์ของเว็บไซต์',
+      },
+    },
+  ],
+};
+---
+<Layout
+  title="fur Sanctuary — ชุมชนของเรา"
+  description="เข้าร่วม fur Sanctuary ชุมชน Furry ไทยบน Discord พูดคุย แลกเปลี่ยนความคิด และสร้างมิตรภาพ — เข้าฟรีได้เลยที่ discord.gg/fursanctuary"
+>
+  <Navbar />
+  <Header />
 
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-			body {
-				background-color: var(--color-primary);
-				color: #ffffff;
-				font-family: sans-serif;
-				min-height: 100vh;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.logo {
-				width: 120px;
-				height: 120px;
-				object-fit: contain;
-				margin-bottom: 1.5rem;
-				filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-			}
-
-			h1 {
-				font-size: 2rem;
-				letter-spacing: 0.05em;
-			}
-		</style>
-	</head>
-	<body>
-		<img src="/logo.png" alt="Fur Sanctuary Logo" class="logo" />
-		<h1>Fur Sanctuary</h1>
-	</body>
-	<script>
-		setTimeout(() => {
-			window.location.replace('https://discord.gg/fursanctuary');
-		}, 5000);
-	</script>
-</html>
+  <Footer />
+</Layout>

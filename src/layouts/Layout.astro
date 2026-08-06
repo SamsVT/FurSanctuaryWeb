@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const site = 'https://fur-sanctuary-web.vercel.app';
+
+const {
+  title = 'fur Sanctuary',
+  description = 'พื้นที่สำหรับ Furry ไทย พูดคุย แลกเปลี่ยนความคิด และสร้างมิตรภาพ บน Discord',
+  image = '/logo.png',
+} = Astro.props;
+
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL(image, site).href;
+const fullTitle = title.includes('fur Sanctuary') ? title : `${title} — fur Sanctuary`;
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'fur Sanctuary',
+  url: site,
+  logo: new URL('/logo.png', site).href,
+  description,
+  sameAs: [
+    'https://discord.gg/fursanctuary',
+    'https://www.roblox.com/communities/35006091/Fur-Sanctuary',
+    'https://www.roblox.com/games/92817779508666/Fur-Sanctuary-Hangout',
+    'https://web.facebook.com/groups/1078261587316648',
+    'https://web.facebook.com/profile.php?id=61578246848418',
+    'https://www.tiktok.com/@fursanctuary',
+    'https://www.youtube.com/@FurSanctuary',
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'fur Sanctuary',
+  url: site,
+  inLanguage: 'th',
+};
+---
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={pageUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="fur Sanctuary" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="th_TH" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>{fullTitle}</title>
+
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary: #2D4932;
+    --primary-dark: #1e3322;
+    --primary-light: #3d6344;
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #f1f1f1;
+    --discord: #5865F2;
+    --discord-dark: #4752C4;
+    --radius: 14px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-lg: 0 20px 50px rgba(45, 73, 50, 0.15);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.01em;
+  }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+  ::selection { background: var(--primary); color: #fff; }
+</style>

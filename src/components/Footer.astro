@@ -1,0 +1,130 @@
+---
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-brand" href="/">
+          <img src="/logo.png" alt="fur Sanctuary Logo" />
+          <span>fur Sanctuary</span>
+        </a>
+        <p class="footer-copy">พื้นที่สำหรับ Furry ไทย พูดคุย แลกเปลี่ยน และสร้างมิตรภาพ</p>
+        <p class="footer-copyright">© {year} fur Sanctuary · สงวนลิขสิทธิ์</p>
+        <div class="socials" aria-label="ช่องทางโซเชียล">
+          <a
+            href="https://discord.gg/fursanctuary"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="--social-color:#5865f2"
+            aria-label="Discord"
+          >
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">ชุมชน</h3>
+        <nav class="footer-links">
+          <a href="https://discord.gg/fursanctuary" target="_blank" rel="noopener noreferrer">&gt; Discord</a>
+          <a href="https://www.roblox.com/communities/35006091/Fur-Sanctuary" target="_blank" rel="noopener noreferrer">&gt; Roblox Group</a>
+          <a href="https://web.facebook.com/groups/1078261587316648" target="_blank" rel="noopener noreferrer">&gt; Facebook Group</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer-title">ช่องทางโซเชียล</h3>
+        <nav class="footer-links">
+          <a href="https://www.roblox.com/games/92817779508666/Fur-Sanctuary-Hangout" target="_blank" rel="noopener noreferrer">&gt; Roblox Game</a>
+          <a href="https://www.tiktok.com/@fursanctuary" target="_blank" rel="noopener noreferrer">&gt; Tiktok</a>
+          <a href="https://web.facebook.com/profile.php?id=61578246848418&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">&gt; Facebook Page</a>
+          <a href="https://www.youtube.com/@FurSanctuary" target="_blank" rel="noopener noreferrer">&gt; Youtube</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="footer-title">กฎหมาย</h3>
+        <nav class="footer-links">
+          <a href="/cookie-policy">&gt; นโยบายคุกกี้</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .wrap {
+    width: min(100% - 40px, 1240px);
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 48px 0 24px;
+    color: #fff;
+    background: #08090b;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 34px;
+    padding-bottom: 30px;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+  }
+  .footer-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+  .footer-copy {
+    max-width: 320px;
+    margin: 16px 0 20px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.9rem;
+  }
+  .socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .socials a {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.06);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .socials a:hover {
+    transform: translateY(-2px);
+    background: var(--social-color);
+  }
+  .footer-title {
+    margin: 0 0 16px;
+    font-size: 0.92rem;
+  }
+  .footer-links {
+    display: grid;
+    gap: 8px;
+  }
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+  }
+  .footer-links a:hover { color: #fff; }
+  .footer-copyright {
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, 0.36);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 18px; }
+    .footer-grid > :first-child { grid-column: 1 / -1; }
+  }
+</style>

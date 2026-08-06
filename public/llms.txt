@@ -1,0 +1,29 @@
+# fur Sanctuary
+
+> fur Sanctuary คือชุมชนออนไลน์สำหรับ Furry ไทย บน Discord ใช้สำหรับพูดคุย แลกเปลี่ยนความคิด และสร้างมิตรภาพ
+
+fur Sanctuary เป็น Discord community ของคนไทยที่ชื่นชอบ Furry มีพื้นที่สำหรับพูดคุยทั่วไป แลกเปลี่ยนความคิดเห็น แชร์ผลงาน และทำกิจกรรมร่วมกัน
+
+## ช่องทางหลัก
+
+- Discord: https://discord.gg/fursanctuary
+
+## ช่องทางอื่น ๆ
+
+- Roblox Group: https://www.roblox.com/communities/35006091/Fur-Sanctuary
+- Roblox Game (Hangout): https://www.roblox.com/games/92817779508666/Fur-Sanctuary-Hangout
+- Facebook Group: https://web.facebook.com/groups/1078261587316648
+- Facebook Page: https://web.facebook.com/profile.php?id=61578246848418
+- TikTok: https://www.tiktok.com/@fursanctuary
+- YouTube: https://www.youtube.com/@FurSanctuary
+
+## หน้าบนเว็บไซต์
+
+- [หน้าแรก](https://fur-sanctuary-web.vercel.app/): หน้าแรกของ fur Sanctuary ชวนเข้าร่วม Discord
+- [นโยบายคุกกี้](https://fur-sanctuary-web.vercel.app/cookie-policy): นโยบายการใช้คุกกี้ของเว็บไซต์
+
+## ข้อมูลสำคัญ
+
+- fur Sanctuary คือ Discord community สำหรับ Furry ไทย
+- เข้าร่วมได้ฟรีผ่านลิงก์ https://discord.gg/fursanctuary
+- มีเกมและกลุ่ม Roblox อย่างเป็นทางการ รวมถึงช่องทางโซเชียลอื่น ๆ ตามรายการด้านบน

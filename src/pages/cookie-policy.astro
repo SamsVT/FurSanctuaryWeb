@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout
+  title="นโยบายคุกกี้"
+  description="นโยบายคุกกี้ของ fur Sanctuary อธิบายว่าคุกกี้คืออะไร เราใช้คุกกี้อย่างไร และคุณจัดการคุกกี้ได้อย่างไร"
+>
+  <Navbar />
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>นโยบายคุกกี้</h1>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="wrap">
+        <section>
+          <h2>1. บทนำ</h2>
+          <p>นโยบายคุกกี้ฉบับนี้ อธิบายว่าคุกกี้คืออะไร เรานำมาใช้อย่างไร และคุณจัดการคุกกี้ได้อย่างไรเมื่อใช้งานเว็บไซต์ของ fur Sanctuary</p>
+        </section>
+
+        <section>
+          <h2>2. คุกกี้คืออะไร</h2>
+          <p>คุกกี้คือไฟล์ขนาดเล็กที่เว็บไซต์จัดเก็บไว้บนอุปกรณ์ของคุณ เพื่อให้เว็บไซต์จดจำข้อมูลและพฤติกรรมของคุณในระหว่างการใช้งานหรือการเข้าใช้งานครั้งถัดไป</p>
+        </section>
+
+        <section>
+          <h2>3. คุกกี้ที่เราใช้</h2>
+          <ul>
+            <li><strong>คุกกี้ที่จำเป็น</strong> — ใช้เพื่อให้เว็บไซต์ทำงานได้ตามปกติ เช่น การจดจำสถานะของเมนูหรือการตั้งค่าพื้นฐาน</li>
+            <li><strong>คุกกี้จากบริการภายนอก</strong> — อาจเกิดขึ้นจากบริการของบุคคลที่สาม เช่น ฟอนต์ที่โหลดผ่าน CDN ซึ่งโดยทั่วไปจะไม่ใช้เพื่อติดตามตัวตนของคุณ</li>
+          </ul>
+          <p>เราไม่ใช้คุกกี้เพื่อโฆษณาเชิงพฤติกรรม และไม่ขายข้อมูลของคุณให้บุคคลที่สาม</p>
+        </section>
+
+        <section>
+          <h2>4. การจัดการคุกกี้</h2>
+          <p>คุณสามารถปิดหรือลบคุกกี้ได้ผ่านการตั้งค่าของเบราว์เซอร์ที่คุณใช้งาน หากปิดคุกกี้บางชนิด เว็บไซต์บางฟังก์ชันอาจทำงานได้ไม่เต็มที่</p>
+        </section>
+
+        <section>
+          <h2>5. การติดต่อ</h2>
+          <p>หากมีคำถามเกี่ยวกับนโยบายคุกกี้นี้ คุณสามารถติดต่อเราได้ผ่านช่องทางที่ระบุไว้ในหน้าแรกของเว็บไซต์</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .wrap { width: min(760px, calc(100% - 40px)); margin: auto; }
+
+  .hero { padding: 64px 0 40px; }
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .content { padding: 8px 0 72px; }
+  .content section { padding: 26px 0; border-bottom: 1px solid var(--border); }
+  .content section:first-child { padding-top: 10px; }
+  .content section:last-child { border-bottom: 0; }
+  .content h2 { margin: 0 0 10px; font-size: 1.22rem; }
+  .content p { margin: 0 0 14px; color: #3f4753; }
+  .content p:last-child { margin-bottom: 0; }
+  .content ul { margin: 0 0 14px; padding-left: 22px; color: #3f4753; }
+  .content ul:last-child { margin-bottom: 0; }
+  .content li { margin-bottom: 8px; }
+  .content li:last-child { margin-bottom: 0; }
+  .content strong { color: var(--text); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 48px 0 32px; }
+    .content { padding-bottom: 56px; }
+  }
+</style>
